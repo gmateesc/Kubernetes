@@ -20,6 +20,7 @@
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments', 'ACR_NAME', Justification='scope')]
 
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments', 'NodeCount', Justification='scope')]
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseDeclaredVarsMoreThanAssignments', 'StopCluster', Justification='scope')]
 
 param()
 
@@ -54,6 +55,7 @@ $NodeCount = "2"
 $ACR_NAME = "acrgabi"
 
 
+$StopCluster = $false
 
 
 #
@@ -62,5 +64,5 @@ $ACR_NAME = "acrgabi"
 
 #function prompt {"PS [$env:COMPUTERNAME]> "}
 #function prompt {"PS > "}
-function prompt {"PS $ "}
+function prompt {"PS> "}
 
