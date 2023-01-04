@@ -167,7 +167,7 @@ if ( ($null -eq $ActualRegion) -or ($ActualRegion -ne $Region) ) {
 
 
 #
-# 3. Create AKS cluster if needed
+# 3. Create AKS cluster if needed then start it, set context and get credentials
 #
 
 #
@@ -209,7 +209,7 @@ az aks start --name $AKSCluster --resource-group $RG
 
 
 #
-# 3.3 Set  context
+# 3.3 Use context $AKSCluster
 #
 kubectl config use-context $AKSCluster 
 #$ActualAKSCluster = (kubectl config current-context)
@@ -238,7 +238,10 @@ az aks get-credentials -g $RG -n $AKSCluster --overwrite-existing
 #
 # 4. Stop cluster
 #
-az aks stop --name $AKSCluster --resource-group $RG
+if ( $StopCluster) {
+  Write-Warning "Stopping cluster $AKSCluster"
+  az aks stop --name $AKSCluster --resource-group $RG
+}
 
 
 
