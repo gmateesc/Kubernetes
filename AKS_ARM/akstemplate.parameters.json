@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clusterName": {
+      "value": "clusterone"
+    },
+    "dnsPrefix": {
+      "value": "clusterone"
+    },
+    "linuxAdminUsername": {
+      "value": "azureuser"
+    },
+    "osDiskSizeGB": {
+      "value": 32
+    },
+    "agentCount": {
+      "value": 1
+    },
+    "sshRSAPublicKey": {
+	"value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDOab+2sjGlFjGvA3NWUK0ZjtYBQ1stZ0+nq/sJT2aaIqrQHWLL3Mps9gQIwzhqioMXn7/AnE+ZBLaxOQ22GK+rs98247lYps/IM5+1DcPMluaaZJwxwuuBh2lvHQVD2ESYcTto0fkN4UX4jK7gecKRUM/Fh79WbT2jzD2Rb7rIqqf6E5vxT/Pw8E1S7Fgbi8okv0KiBCsnMWCwKx/3l3py0nUuoqLjl76RhmBpUVlFJCumqx+up8yt8rQY2KwtK6I6+4IwdcAbtkWYvzeo5LqQ9kIG9YrDyBWxzlDztzH1SQm/R/eK/HtY4QiUY9KuWZPIOm4RCubQEyxKM5PZ86HBTyJ4Ojts25bal9/iAw6vtVX/1w9rheqGX+wIySJZ8dFYJo4RqIDjxyJcZsws8ciYh1DOo3rA40d26/0/q8cqf0FryQjpg6uYdInqSLu79fcRA0Rfqe1SLk6nH6S0C32AUedz0qcmKEIKkmkHWYRnxXjeYCXiPEuMLqY8VJKyErG0/omqGWI/W7uNNDy99TPvL4TKeY4FX5hANyg02PFwtELv9WRbIZKog+QV2kOJzpahRLYd8pImnXHKJMiQXwutDgL1pyzjhlZJS8QtLI+0QTQE7TdNdeSqXX1y/JESLjDi6h9q3fpQSWRh18dOYDhlkIu8MGHbKxUlmWUJZso2Vw== azureuser@linuxvm"
+    }
+  }
+}
