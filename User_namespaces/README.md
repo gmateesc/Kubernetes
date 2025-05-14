@@ -6,7 +6,7 @@
 - [About K8s versions](#p2)
   - [Support for user namespaces](#p21)
 
-- [Matrix of access versus settings(#p3)
+- [Matrix of access versus settings](#p3)
 
 
 
@@ -63,8 +63,7 @@ must be avoided by
 ### Matrix of access versus settings
 
 
-| Container  |allowPrivilegeEscalation|  capabilities  | sys_admin on   | access to host  |
-|  user      |                        |                |   container    | root FS         | 
+| Container user |allowPrivilegeEscalation|  capabilities  | sys_admin on container | access to host root FS | 
 | :--------- | :--------------------: | :------------: | :------------: | :-------------: |
 | root       |                        |                |    yes         | yes, if no UID map |
 | 1000       |     true               |                | yes, with sudo | yes, if no UID map |
