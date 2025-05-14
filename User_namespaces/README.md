@@ -5,6 +5,8 @@
 
 - [About K8s versions](#p2)
   - [Support for user namespaces](#p21)
+  - [Security context attributes](#p22)
+
 
 - [Matrix of access versus settings](#p3)
 
@@ -43,7 +45,15 @@ Kubernetes versions prior to 1.33.0 do no support user namespaces.
 
 Therefore, root user on the container is mapped to root on the
 node where the container runs, which is a security hole that
-must be avoided by
+must be avoided as discussed next.
+
+
+
+
+<a name="p22" id="p22"></a>
+## Security context attributes
+
+Specific security context attributes are required to avoid rooting the host:
 
 - not running containers as root: this can be achieved
   by specifying, e.g.,
