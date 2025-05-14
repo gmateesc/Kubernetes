@@ -1,5 +1,18 @@
 
+# Table of Contents
+
+- [Overview](#p1)
+
+- [About K8s versions](#p2)
+  - [Support for user namespaces](#p21)
+
+- [Matrix of access versus settings(#p3)
+
+
+
+<a name="p1" id="p1"></a>
 # Overview
+
 
 This page describe the relationship between K8s settings such as the
 securityContext attribyes
@@ -19,7 +32,12 @@ and
 
 
 
-## K8s versions
+
+<a name="p2" id="p2"></a>
+# About K8s versions
+
+<a name="p21" id="p21"></a>
+## Support for user namespaces
 
 Kubernetes versions prior to 1.33.0 do no support user namespaces.
 
@@ -40,6 +58,8 @@ must be avoided by
 ```
 
 
+
+<a name="p3" id="p3"></a>
 ### Matrix of access versus settings
 
 
