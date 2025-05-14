@@ -77,6 +77,6 @@ Specific security context attributes are required to avoid rooting the host:
 | :--------- | :--------------------: | :------------: | :------------: | :-------------: |
 | root       |                        |                |    yes         | yes, if no UID map |
 | 1000       |     true               |                | yes, with sudo | yes, if no UID map |
-|            |     true               |  SYS_ADMIN     | yes, wo sudo   |      no        |
+|            |     true               |  SYS_ADMIN     | yes, wo sudo   |   no, wo sudo   |
 |            |     false              |  SYS_ADMIN     |    no          |      no        |
 
