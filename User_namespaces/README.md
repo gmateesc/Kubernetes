@@ -19,3 +19,23 @@ and
 
 
 
+## K8s versions
+
+Kubernetes versions prior to 1.33.0 do no support user namespaces.
+
+Therefore, root user on the container is mapped to root on the
+node where the container runs, which is a security hole that
+must be avoided by
+
+- not running containers as root: this can be achieved
+  by specifying, e.g.,
+```
+     securityContext.runAsUser: 1000 
+     securityContext.runAsGroup: 1000
+```
+
+- disabling privilege escalation
+```
+     securityContext.allowPrivilegeEscalation: false 
+```
+
