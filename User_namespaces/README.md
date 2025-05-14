@@ -1,5 +1,5 @@
 
-# Table of Contents
+## Table of Contents
 
 - [Overview](#p1)
 
@@ -13,7 +13,7 @@
 
 
 <a name="p1" id="p1"></a>
-# Overview
+## Overview
 
 
 This page describe the relationship between K8s settings such as the
@@ -36,10 +36,10 @@ and
 
 
 <a name="p2" id="p2"></a>
-# About K8s versions
+## About K8s versions
 
 <a name="p21" id="p21"></a>
-## Support for user namespaces
+### Support for user namespaces
 
 Kubernetes versions prior to 1.33.0 do no support user namespaces.
 
@@ -51,7 +51,7 @@ must be avoided as discussed next.
 
 
 <a name="p22" id="p22"></a>
-## Security context attributes
+### Security context attributes
 
 Specific security context attributes are required to avoid rooting the host:
 
@@ -70,7 +70,7 @@ Specific security context attributes are required to avoid rooting the host:
 
 
 <a name="p3" id="p3"></a>
-### Matrix of access versus settings
+## Matrix of access versus settings
 
 
 | Container user |allowPrivilegeEscalation|  capabilities  | sys_admin on container | access to host root FS | 
