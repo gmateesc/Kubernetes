@@ -13,7 +13,7 @@ securityContext attribyes
 
 and
 
-- the operations the container user can perform in the container
+- the operations that the container user can perform in the container
 
 - the access the container has to the the host root file system, in the context of UID mapping
 
@@ -38,4 +38,16 @@ must be avoided by
 ```
      securityContext.allowPrivilegeEscalation: false 
 ```
+
+
+### Matrix of access versus settings
+
+
+| Container  |allowPrivilegeEscalation|  capabilities  | sys_admin on   | access to host  |
+|  user      |                        |                |   container    | root FS         | 
+| :--------- | :--------------------: | :------------: | :------------: | :-------------: |
+| root       |                        |                |    yes         | yes, if no UID map |
+| 1000       |     true               |                | yes, with sudo | yes, if no UID map |
+|            |     true               |  SYS_ADMIN     | yes, wo sudo   |      no        |
+|            |     false              |  SYS_ADMIN     |    no          |      no        |
 
